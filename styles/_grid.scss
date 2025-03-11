@@ -1,0 +1,55 @@
+// Mixin for grid items
+@mixin grid-item($col-start, $col-end, $row-start, $row-end) {
+    grid-column: #{$col-start} / #{$col-end};
+    grid-row: #{$row-start} / #{$row-end};
+  }
+  
+  // Main section styling
+  main {
+    max-width: $max-width;
+    height: $main-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  // Grid container
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(32, 1fr);
+    grid-gap: $grid-gap;
+    max-width: $container-width;
+    height: $grid-height;
+    margin: 0 auto;
+  }
+  
+  // Grid item styles
+  .grid-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: flex;
+    }
+  }
+  
+  // Specific grid item placements
+  .item1 { @include grid-item(1, 4, 1, 5); }
+  .item2 { @include grid-item(4, 7, 1, 5); }
+  .item3 { @include grid-item(7, 10, 1, 8); }
+  .item4 { @include grid-item(1, 5, 5, 12); }
+  .item5 { @include grid-item(5, 7, 5, 8); }
+  .item6 { @include grid-item(1, 5, 12, 19); }
+  .item7 { @include grid-item(5, 10, 8, 19); }
+  .item8 { @include grid-item(1, 4, 19, 26); }
+  .item9 { @include grid-item(4, 7, 19, 26); }
+  .item10 { @include grid-item(7, 10, 19, 26); }
+  .item11 { @include grid-item(1, 5, 26, 32); }
+  .item12 { @include grid-item(5, 10, 26, 32); }

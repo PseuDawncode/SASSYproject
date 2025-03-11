@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   display: flex;
   justify-content: center;
@@ -83,32 +84,53 @@ body {
 .hero {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 40px;
+  align-items: center;
+  max-width: 550px;
+  margin: 50px;
+  padding: 25px;
 }
-.hero .top-text {
-  color: #5E67F7;
-  margin-bottom: 20px;
-  font-size: 16px;
+.hero__container {
+  height: 251px;
 }
-.hero .name {
-  font-size: 32px;
+.hero__tag {
+  color: #4A4FF2;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
-.hero .role {
-  color: #5E67F7;
-  font-size: 20px;
-  margin-bottom: 10px;
+.hero__content {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: rgb(38, 32, 32);
 }
-.hero .description {
-  font-size: 20px;
-  margin-bottom: 20px;
-  max-width: 400px;
+.hero .highlight {
+  color: #4A4FF2;
 }
-.hero .quote {
-  color: #888;
-  font-size: 14px;
-  font-style: italic;
+
+.quote__container {
+  display: flex;
+  padding: 10px;
+  justify-self: flex-end;
+  margin-right: 15%;
+  margin-top: -10%;
+  flex-direction: row;
+}
+.quote__container .right-content {
   text-align: right;
+  color: gray;
+  font-style: italic;
+  font-size: 18px;
+}
+.quote__container .quote {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+}
+.quote__container .quote::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  color: gray;
 }/*# sourceMappingURL=style.css.map */
