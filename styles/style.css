@@ -44,7 +44,7 @@ header button:hover {
   display: flex;
 }
 .navbar__links {
-  color: #fff;
+  color: rgb(38, 32, 32);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,14 +82,33 @@ body {
 
 .hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: white;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
 }
-.hero button {
-  background: rgb(31, 134, 174);
+.hero .top-text {
+  color: #5E67F7;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
-.hero button:hover {
-  background: orange;
+.hero .name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.hero .role {
+  color: #5E67F7;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.hero .description {
+  font-size: 20px;
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+.hero .quote {
+  color: #888;
+  font-size: 14px;
+  font-style: italic;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

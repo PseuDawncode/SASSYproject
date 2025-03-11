@@ -9,13 +9,39 @@ body {
     background: $primaryBckgrnd;
 }
 
-.hero{
-    @include flexCenter(column);
-    background: $primaryBckgrnd;
-    button{
-        background: $primaryBtn;
-        &:hover{
-            background: $hoverBtn;
-        }
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+
+    .top-text {
+        color: #5E67F7;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .role {
+        color: #5E67F7;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .description {
+        font-size: 20px;
+        margin-bottom: 20px;
+        max-width: 400px;
+    }
+
+    .quote {
+        color: #888;
+        font-size: 14px;
+        font-style: italic;
+        text-align: right;
     }
 }
