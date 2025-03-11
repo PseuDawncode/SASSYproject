@@ -3,8 +3,8 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: lightcoral;
   color: rgb(38, 32, 32);
+  background: white;
 }
 header button {
   background: rgb(31, 134, 174);
@@ -14,7 +14,6 @@ header button:hover {
 }
 
 .navbar {
-  background: #131313;
   height: 80px;
   display: flex;
   justify-content: center;
