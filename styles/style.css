@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: lightcoral;
+  color: rgb(38, 32, 32);
+}
+header button {
+  background: rgb(31, 134, 174);
+}
+header button:hover {
+  background: orange;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: white;
+}
+.hero button {
+  background: rgb(31, 134, 174);
+}
+.hero button:hover {
+  background: orange;
+}/*# sourceMappingURL=style.css.map */

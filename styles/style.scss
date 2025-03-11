@@ -1,0 +1,15 @@
+@import './variables';
+@import './header';
+
+
+
+.hero{
+    @include flexCenter(column);
+    background: $primaryBckgrnd;
+    button{
+        background: $primaryBtn;
+        &:hover{
+            background: $hoverBtn;
+        }
+    }
+}
