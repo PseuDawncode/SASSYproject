@@ -5,7 +5,7 @@ $spacing-lg: 80px;
 $spacing-md: 40px;
 $spacing-sm: 20px;
 
-// Mixins
+
 @mixin flex-layout($direction: row, $justify: flex-start, $align: stretch) {
   display: flex;
   flex-direction: $direction;
@@ -67,7 +67,11 @@ $spacing-sm: 20px;
       }
     }
   }
+
+
+
   
+
   // Responsive adjustments
   @media (max-width: 992px) {
     .services-section {

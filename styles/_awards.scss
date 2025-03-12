@@ -1,0 +1,165 @@
+// Variables
+$font-primary: 'Helvetica Neue', Arial, sans-serif;
+$color-text: #333;
+$color-light-text: #6b6b6b;
+$color-divider: #e0e0e0;
+$spacing-lg: 60px;
+$spacing-md: 40px;
+$spacing-sm: 20px;
+$spacing-xs: 10px;
+
+// Mixins
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-text;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+}
+
+// Awards Section
+.awards-section {
+  padding: $spacing-lg 0;
+  
+  .award-item {
+    @include flex(row, space-between, flex-start);
+    margin-bottom: $spacing-md;
+    
+    @media (max-width: 768px) {
+      @include flex(column);
+      margin-bottom: $spacing-sm;
+    }
+  }
+  
+  .award-column {
+    padding-right: $spacing-sm;
+    
+    @media (max-width: 768px) {
+      margin-bottom: $spacing-xs;
+    }
+  }
+  
+  .award-name {
+    flex: 0 0 20%;
+    
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+    }
+  }
+  
+  .award-category {
+    flex: 0 0 20%;
+    
+    h4 {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      padding-left: $spacing-sm;
+    }
+  }
+  
+  .award-details {
+    flex: 0 0 45%;
+    
+    h5 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: $spacing-xs;
+    }
+    
+    p {
+      font-size: 14px;
+      color: $color-light-text;
+      line-height: 1.4;
+    }
+    
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      padding-left: $spacing-sm;
+    }
+  }
+  
+  .award-year {
+    flex: 0 0 15%;
+    text-align: right;
+    
+    span {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      text-align: left;
+      padding-left: $spacing-sm;
+    }
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: $color-divider;
+    margin: $spacing-md 0;
+    width: 100%;
+  }
+}
+
+// Empty space styling for alignment
+.award-item:nth-child(even) {
+  .award-name {
+    @media (min-width: 769px) {
+      visibility: hidden;
+    }
+    
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+// Additional responsive adjustments
+@media (max-width: 992px) {
+  .awards-section {
+    .award-name {
+      flex: 0 0 25%;
+    }
+    
+    .award-category {
+      flex: 0 0 25%;
+    }
+    
+    .award-details {
+      flex: 0 0 35%;
+    }
+    
+    .award-year {
+      flex: 0 0 15%;
+    }
+  }
+}
