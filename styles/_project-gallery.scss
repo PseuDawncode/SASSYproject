@@ -1,0 +1,45 @@
+$primary-color: #000;
+$secondary-color: #666;
+$font-stack: "Arial", sans-serif;
+
+
+.container {
+    max-width: 1000px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    justify-items: center;
+}
+
+.text-section {
+    p {
+        font-size: 16px;
+        color: $secondary-color;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .gallery-item {
+        width: 100%;
+        img {
+            width: 350px;
+            height: 400px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
