@@ -501,6 +501,108 @@ p {
     gap: 15px;
   }
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .content-section {
+    flex-wrap: nowrap;
+  }
+}
+
+.text-section {
+  flex: 1;
+  min-width: 300px;
+}
+.text-section .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.text-section .subtitle {
+  font-size: 1rem;
+  color: #666;
+  max-width: 400px;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+}
+.form-section .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.form-section .contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-section .contact-form .form-group label {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+.form-section .contact-form .form-group input, .form-section .contact-form .form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: inherit;
+  width: 100%;
+}
+.form-section .contact-form .form-group input:focus, .form-section .contact-form .form-group textarea:focus {
+  outline: none;
+  border-color: #5c66ef;
+}
+.form-section .contact-form .form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.form-section .contact-form .submit-btn {
+  background-color: #5c66ef;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: -moz-max-content;
+  width: max-content;
+}
+.form-section .contact-form .submit-btn:hover {
+  background-color: #2e3aea;
+}
+
+.map-section {
+  width: 100%;
+}
+.map-section .map-container {
+  width: 100%;
+  height: 400px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.map-section .map-container .map-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
