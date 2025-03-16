@@ -47,7 +47,7 @@ $spacing-xs: 10px;
   .award-name {
     flex: 0 0 20%;
     
-    h3 {
+    h2 {
       font-size: 18px;
       font-weight: 600;
     }
@@ -60,7 +60,7 @@ $spacing-xs: 10px;
   .award-category {
     flex: 0 0 20%;
     
-    h4 {
+    p {
       font-size: 16px;
       font-weight: 500;
     }
@@ -74,7 +74,7 @@ $spacing-xs: 10px;
   .award-details {
     flex: 0 0 45%;
     
-    h5 {
+    .title {
       font-size: 16px;
       font-weight: 500;
       margin-bottom: $spacing-xs;
@@ -95,6 +95,7 @@ $spacing-xs: 10px;
   .award-year {
     flex: 0 0 15%;
     text-align: right;
+    justify-items: center;
     
     span {
       font-size: 16px;
@@ -108,7 +109,7 @@ $spacing-xs: 10px;
     }
   }
   
-  .divider {
+  .line {
     height: 1px;
     background-color: $color-divider;
     margin: $spacing-md 0;
