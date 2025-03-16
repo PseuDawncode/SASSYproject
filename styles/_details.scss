@@ -2,30 +2,29 @@ $primary-font: 'Helvetica Neue', Arial, sans-serif;
 $heading-color: #000;
 $text-color: #333;
 $spacing-lg: 80px;
-$spacing-md: 40px;
-$spacing-sm: 20px;
 
 
-@mixin flex-layout($direction: row, $justify: flex-start, $align: stretch) {
+@mixin flex-layout($direction: row, $justify: flex-start, $align: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
 }
-
-.container {
+  
+.services__container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 $spacing-sm;
+
   }
   
   // Services Section
-  .services-section {
+  .featured-services {
     padding: $spacing-lg 0;
     
     .services-content {
-      @include flex-layout(row, space-between, flex-start);
+      @include flex-layout(row, flex-start, center);
       gap: $spacing-md;
       
       @media (max-width: 768px) {
@@ -35,6 +34,7 @@ $spacing-sm: 20px;
     
     .services-intro {
       flex: 0 0 60%;
+      justify-content: center;
       
       h2 {
         font-size: 32px;
@@ -58,6 +58,7 @@ $spacing-sm: 20px;
           color: $text-color;
           font-size: 18px;
           position: relative;
+          justify-content: center;
           
           &:hover {
             text-decoration: underline;
@@ -74,7 +75,7 @@ $spacing-sm: 20px;
 
   // Responsive adjustments
   @media (max-width: 992px) {
-    .services-section {
+    .featured-services {
       .services-intro {
         h2 {
           font-size: 28px;
@@ -84,7 +85,7 @@ $spacing-sm: 20px;
   }
   
   @media (max-width: 768px) {
-    .services-section {
+    .featured-services {
       .services-content {
         gap: $spacing-sm;
       }

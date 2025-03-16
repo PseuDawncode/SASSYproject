@@ -3,9 +3,7 @@ $font-primary: 'Helvetica Neue', Arial, sans-serif;
 $color-text: #333;
 $color-light-text: #6b6b6b;
 $color-divider: #e0e0e0;
-$spacing-lg: 60px;
-$spacing-md: 40px;
-$spacing-sm: 20px;
+$spacing-lgm: 60px;
 $spacing-xs: 10px;
 
 // Mixins
@@ -17,20 +15,8 @@ $spacing-xs: 10px;
   flex-wrap: $wrap;
 }
 
-// Reset
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: $font-primary;
-  color: $color-text;
-  line-height: 1.6;
-}
-
-.container {
+.awards__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 $spacing-sm;
@@ -38,9 +24,9 @@ body {
 
 // Awards Section
 .awards-section {
-  padding: $spacing-lg 0;
+  padding: $spacing-lgm 0;
   
-  .award-item {
+  .awards-item {
     @include flex(row, space-between, flex-start);
     margin-bottom: $spacing-md;
     
@@ -50,7 +36,7 @@ body {
     }
   }
   
-  .award-column {
+  .awards-column {
     padding-right: $spacing-sm;
     
     @media (max-width: 768px) {

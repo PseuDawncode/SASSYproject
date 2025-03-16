@@ -1,61 +1,94 @@
-$primary-color: #000;
+// Variables
+$font-family: 'Inter', sans-serif;
+$primary-color: #333;
 $secondary-color: #666;
-$font-stack: "Arial", sans-serif;
+$light-color: #999;
+$border-color: #eee;
+$max-container-width: 1200px;
+$box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 
 
-.container {
-    max-width: 900px;
-    background: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+// Layout
+.project__container {
+  max-width: $max-container-width;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 0;
 }
 
-h1 {
-    font-size: 28px;
-    font-weight: bold;
-    color: $primary-color;
-    margin-bottom: 20px;
-}
-
-p {
+// Project Introduction Section
+.project-intro {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  
+  .project-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+  
+  .project-description {
     font-size: 16px;
     color: $secondary-color;
-    line-height: 1.6;
+    margin-bottom: 20px;
+  }
 }
 
-.info-panel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 30px;
-
-    .info {
-        font-size: 14px;
-        color: $primary-color;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #ddd;
-        padding: 8px 0;
-
-        span {
-            font-weight: bold;
-            color: $secondary-color;
-        }
+// Project Details Section
+.project-details {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid $border-color;
+    
+    .detail-label {
+      color: $light-color;
+      font-size: 16px;
     }
-}
-
-.image-container {
-    margin-top: 30px;
-    img {
-        width: 100%;
-        border-radius: 10px;
-        object-fit: cover;
+    
+    .detail-value {
+      font-weight: 600;
+      font-size: 16px;
+      text-align: right;
     }
+  }
 }
 
+.img__container {
+    display: flex;
+    margin-top: 60px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    
+    .feature-img {
+      width: 1110px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: $box-shadow;
+    }
+  }
+
+// Media Queries for Responsiveness
 @media (max-width: 768px) {
-    .info-panel {
-        grid-template-columns: 1fr;
-    }
+  .container {
+    flex-direction: column;
+  }
+  
+  .project-intro,
+  .project-details {
+    max-width: 100%;
+  }
 }
