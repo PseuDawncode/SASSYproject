@@ -3,27 +3,31 @@ $secondary-color: #666;
 $font-stack: "Arial", sans-serif;
 
 
-.container {
-    max-width: 1000px;
-    text-align: center;
+.gallery__container {
+    min-width: 100px;
+    margin-top: 20px;
     padding: 40px;
     border-radius: 10px;
+    justify-content: center;
     justify-items: center;
+    align-items: center;
+
 }
 
 .text-section {
     p {
         font-size: 16px;
+        text-align: block;
         color: $secondary-color;
         line-height: 1.6;
         margin-bottom: 30px;
+        padding: 20px;
     }
 }
 
-.gallery {
+.images {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 20px;
 
     .gallery-item {
